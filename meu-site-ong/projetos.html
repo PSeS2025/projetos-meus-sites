@@ -1,0 +1,113 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="utf-8">
+  <!-- Codificação de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Torna a página responsiva em dispositivos móveis -->
+  <title>Contato - ONG Esperança</title>
+  <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link para CSS externo -->
+  <script src="js/main.js" defer></script>
+  <!-- Script JS externo; defer garante carregamento após o HTML -->
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" ajuda leitores de tela -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome da ONG -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação; aria-label melhora acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <!-- aria-current indica página atual -->
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Conteúdo principal da página -->
+    <h1>Projetos sociais</h1>
+    <!-- Título principal -->
+    <p>Lista de projetos e descrições.</p>
+    <!-- Breve descrição da seção -->
+
+    <h2>Galeria Completa</h2>
+    <!-- Subtítulo da galeria -->
+    <div class="gallery" id="gallery" aria-label="Galeria completa"></div>
+    <!-- Container da galeria; aria-label para acessibilidade -->
+
+    <script>
+      // Lista de arquivos de imagem para a galeria
+      const imagens = [
+        "18demaio.jpg",
+        "18demaiofoto2.jpg",
+        "acolhimentocriança.jpg",
+        "bebêsfoto1.jpg",
+        "criançaecomputador.jpg",
+        "criançaetablet.jpg",
+        "criança-mãos-dadas.jpg",
+        "criançasacompanhadas.jpg",
+        "criançasfelizes.jpg",
+        "criançasfoto1.jpg",
+        "dadosdevítimas.jpg",
+        "denuncie_disque100.jpg",
+        "desenhomenina.png",
+        "diga_nao_ao_abuso_e_exploracao.jpg",
+        "disque100.jpg",
+        "imagem-mensagem.jpg",
+        "juntos.jpg",
+        "maninatriste.jpg",
+        "meninajanela.jpg",
+        "mensagem.jpg",
+        "mensagem-abuso-crianças-adolescentes.jpg",
+        "mensagem-bonequinha.jpg",
+        "ursinhos-mensagem.jpg",
+        "vítima-online.jpg"
+      ];
+
+      const galeria = document.getElementById("gallery");
+      // Seleciona o container da galeria no DOM
+
+      imagens.forEach((arquivo, index) => {
+        // Para cada imagem, cria elementos HTML dinamicamente
+        const figure = document.createElement("figure");
+        const picture = document.createElement("picture");
+        const img = document.createElement("img");
+
+        img.src = `assets/images/${arquivo}`;
+        img.alt = `Projeto ${index + 1}`;
+        // Alt descritivo; importante para acessibilidade
+        img.loading = "lazy";
+        // Lazy loading para melhorar desempenho da página
+
+        picture.appendChild(img);
+        figure.appendChild(picture);
+
+        const caption = document.createElement("figcaption");
+        caption.textContent = `Projeto ${index + 1}`;
+        // Legenda para a imagem
+        figure.appendChild(caption);
+
+        galeria.appendChild(figure);
+        // Adiciona a figura completa à galeria
+      });
+    </script>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé da página; role="contentinfo" para leitores de tela -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

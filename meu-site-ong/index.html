@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8">
+  <!-- Codificação de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Torna a página responsiva em dispositivos móveis -->
+  <title>ONG Esperança - Início</title>
+  <!-- Título da página exibido na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link para arquivo CSS externo -->
+  <script src="js/main.js" defer></script>
+  <!-- Script externo; defer garante que carregue após o HTML -->
+</head>
+<body>
+  <header style="
+    background-image: url('Color1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+  ">
+    <!-- Cabeçalho com imagem de fundo; idealmente mover CSS para style.css -->
+    <h1><strong>ONG Esperança</strong></h1>
+    <!-- Nome da ONG, destacado em negrito -->
+    <nav>
+      <!-- Navegação principal -->
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="voluntariado.html">Voluntariado</a>
+      <a href="doacoes.html">Doações</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="contato.html">Contato</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Conteúdo principal da página -->
+    <section aria-labelledby="programas">
+      <!-- Seção de programas, título associado via aria-labelledby -->
+      <h1 id="programas">PROGRAMAS</h1>
+      <!-- Título principal da seção -->
+      <h2>Programa de Enfrentamento à Exploração e Abuso Infantil</h2>
+      <!-- Subtítulo explicativo -->
+
+      <!-- Artigos individuais para cada conteúdo -->
+      <article class="card">
+        <h3>Abuso e Exploração Sexual</h3>
+        <p>Combater o abuso e a exploração sexual infantil é dever de todos. Denuncie e apoie nossas ações.</p>
+      </article>
+
+      <article class="card">
+        <h3>Você Sabia?</h3>
+        <p>É crime fotografar, filmar, baixar, armazenar ou compartilhar material com crianças e adolescentes nus ou em poses eróticas.</p>
+      </article>
+
+      <article class="card">
+        <h3>Diferença entre Abuso Sexual e Exploração Sexual</h3>
+        <p><strong>Abuso Sexual:</strong> Prática sexual contra crianças e adolescentes, geralmente cometida por pessoas próximas à vítima.</p>
+        <p><strong>Exploração Sexual:</strong> Envolve lucro, intermediação e produção de material pornográfico infantil.</p>
+      </article>
+
+      <article class="card">
+        <h3>Quem são os abusadores?</h3>
+        <p>A maioria são homens, geralmente parentes das vítimas, com histórico de violência, drogas ou negligência.</p>
+      </article>
+    </section>
+
+    <aside class="card" aria-label="Materiais de apoio">
+      <!-- Conteúdo complementar: materiais de referência -->
+      <h2>Para saber mais:</h2>
+      <p>Acesse a <a href="https://www.policiacivil.sp.gov.br/portal/imagens/Cartilha%20Violencia%20Sexual.pdf" target="_blank" rel="noopener noreferrer">cartilha sobre violência sexual</a> no site da Polícia Civil.</p>
+      <!-- Link externo seguro: target="_blank" + rel="noopener noreferrer" -->
+    </aside>
+
+    <section aria-labelledby="galeria">
+      <h2 id="galeria">Galeria (destaque)</h2>
+      <div class="gallery" role="list">
+        <!-- Lista de imagens, usando role="list" para acessibilidade -->
+
+        <!-- Figura individual -->
+        <figure role="listitem">
+          <picture>
+            <source srcset="assets/images/imagem-mensagem.jpg" type="imagem-mensagem.jpg">
+            <img class="imagem-especifica" src="assets/images/imagem-mensagem.jpg" alt="Atividade educativa" loading="lazy">
+            <!-- Imagem com alt descritivo e lazy loading para otimização -->
+          </picture>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé com informações de contato -->
+    <address>
+      Rua Exemplo, 123 — Bairro — Cidade/UF<br>
+      email: <a href="mailto:contato@ongesperanca.org">contato@ongesperanca.org</a>
+      <!-- Informações de contato com mailto -->
+    </address>
+    <div class="container">
+      <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

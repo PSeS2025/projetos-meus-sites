@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="utf-8">
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Garante responsividade em dispositivos móveis -->
+  <title>Blog - ONG Esperança</title>
+  <!-- Título da página exibido na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link para a folha de estilos CSS externa -->
+  <script src="js/main.js" defer></script>
+  <!-- Link para o arquivo JS, 'defer' garante que o script carregue após o HTML -->
+</head>
+<body>
+  <!-- Conteúdo visível da página -->
+  <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" ajuda tecnologias assistivas -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome/identidade do site -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação principal; aria-label melhora acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html">Contato</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <!-- aria-current indica a página atual -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Conteúdo principal da página; role="main" indica área principal -->
+    <section aria-labelledby="blog-titulo">
+      <!-- Seção de blog com título associado -->
+      <h1 id="blog-titulo">Blog / Notícias</h1>
+      <p>Fique por dentro das nossas ações, eventos e publicações.</p>
+
+      <!-- Lista de posts (cada artigo com h2) -->
+      <article class="card" aria-labelledby="post1-title">
+        <!-- Artigo individual do blog -->
+        <h2 id="post1-title">Campanha de Doação de Inverno 2025</h2>
+        <p class="meta">Publicado em <time datetime="2025-06-12">12 de junho de 2025</time> — Categoria: Doações</p>
+        <!-- Meta informações do post: data e categoria -->
+        <p>Resumo: encerramos mais uma campanha de inverno com X cobertores distribuídos. Saiba como ajudar na próxima edição.</p>
+        <p><a href="post-campanha-inverno-2025.html">Ler mais</a></p>
+      </article>
+
+      <article class="card" aria-labelledby="post2-title">
+        <h2 id="post2-title">Novo Centro de Atendimento inaugurado no Norte</h2>
+        <p class="meta">Publicado em <time datetime="2025-03-04">4 de março de 2025</time> — Categoria: Projetos</p>
+        <p>Resumo: inauguramos um centro de atendimento que atenderá crianças e famílias da região. Veja vídeo e depoimentos.</p>
+        <p><a href="post-centro-norte.html">Ler mais</a></p>
+      </article>
+
+      <!-- Seção multimídia: vídeo institucional -->
+      <section class="card" aria-labelledby="video-titulo">
+        <h2 id="video-titulo">Vídeo institucional</h2>
+        <p>Conheça nossos projetos em 3 minutos.</p>
+        <!-- Embed responsivo: envolva em um container com CSS para manter proporção -->
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo institucional ONG Esperança" frameborder="0" allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+          <!-- iframe do vídeo ajustável para responsividade -->
+        </div>
+      </section>
+
+      <!-- Depoimentos em áudio -->
+      <section class="card" aria-labelledby="audio-titulo">
+        <h2 id="audio-titulo">Depoimentos</h2>
+        <p>Ouça relatos de beneficiários.</p>
+
+        <article aria-labelledby="audio1-title">
+          <h3 id="audio1-title">Depoimento: Maria</h3>
+          <audio controls preload="none">
+            <source src="assets/audio/depoimento1.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+          </audio>
+          <!-- Player de áudio para o depoimento -->
+          <p><a href="transcricao-depoimento-maria.html">Transcrição</a></p>
+        </article>
+
+        <article aria-labelledby="audio2-title">
+          <h3 id="audio2-title">Depoimento: João</h3>
+          <audio controls preload="none">
+            <source src="assets/audio/depoimento2.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+          </audio>
+        </article>
+      </section>
+
+      <!-- Newsletter / inscrição: formulário simples -->
+      <aside class="card" aria-labelledby="newsletter-titulo">
+        <!-- Conteúdo complementar: formulário de newsletter -->
+        <h2 id="newsletter-titulo">Assine nossa newsletter</h2>
+        <p>Receba novidades por e-mail (mensal).</p>
+        <form id="form-newsletter" action="#" method="post" class="card" aria-describedby="newsletter-desc">
+          <p id="newsletter-desc">Informe seu e-mail e selecione preferências de conteúdo.</p>
+
+          <label for="nl-email">E-mail <span aria-hidden="true">*</span>
+            <input id="nl-email" type="email" name="email" required placeholder="seu@exemplo.com" aria-required="true">
+          </label>
+          <!-- Campo obrigatório para e-mail -->
+
+          <fieldset>
+            <legend>Preferências</legend>
+            <label><input type="checkbox" name="pref[]" value="eventos"> Eventos</label>
+            <label><input type="checkbox" name="pref[]" value="relatorios"> Relatórios e transparência</label>
+            <label><input type="checkbox" name="pref[]" value="voluntariado"> Oportunidades de voluntariado</label>
+            <label><input type="checkbox" name="pref[]" value="campanhas"> Campanhas</label>
+            <!-- Checkboxes para preferências do usuário -->
+          </fieldset>
+
+          <button type="submit">Assinar</button>
+          <!-- Botão de envio do formulário -->
+        </form>
+      </aside>
+
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé da página; role="contentinfo" indica informações de copyright/contato -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

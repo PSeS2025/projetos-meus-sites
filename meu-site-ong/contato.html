@@ -1,0 +1,138 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="utf-8">
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Torna a página responsiva em dispositivos móveis -->
+  <title>Contato - ONG Esperança</title>
+  <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link para o arquivo de estilos CSS externo -->
+  <script src="js/main.js" defer></script>
+  <!-- Link para o arquivo JavaScript; defer garante carregamento após HTML -->
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" ajuda tecnologias assistivas -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome/identidade do site -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação principal; aria-label melhora acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <!-- aria-current indica página atual -->
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Conteúdo principal da página -->
+    <section aria-labelledby="contato-titulo">
+      <!-- Seção de contato; título associado com aria-labelledby -->
+      <h1 id="contato-titulo">Contato institucional</h1>
+      <p>Use o formulário abaixo para falar com nossa equipe. Responderemos pelo e-mail informado.</p>
+
+      <form id="form-contato" class="card check-attachment" action="#" method="post" enctype="multipart/form-data" aria-describedby="contato-desc">
+        <!-- Formulário de contato; enctype permite upload de arquivos -->
+        <p id="contato-desc" class="sr-only">Formulário de contato institucional. Campos com * são obrigatórios.</p>
+        <!-- Descrição acessível para leitores de tela -->
+
+        <fieldset>
+          <legend>Informações do remetente</legend>
+          <!-- Agrupa informações pessoais do remetente -->
+
+          <label for="nome">Nome completo <span aria-hidden="true">*</span>
+            <input id="nome" name="nome" type="text" required minlength="3" placeholder="Seu nome completo" aria-required="true">
+            <!-- Campo obrigatório, mínimo 3 caracteres -->
+          </label>
+
+          <label for="email">E-mail <span aria-hidden="true">*</span>
+            <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" aria-required="true">
+            <!-- Campo obrigatório com validação de e-mail -->
+          </label>
+
+          <label for="telefone">Telefone
+            <input id="telefone" name="telefone" type="tel" data-mask="tel" placeholder="(00) 00000-0000" aria-describedby="telefoneHelp">
+            <small id="telefoneHelp">Opcional, mas útil para contato rápido.</small>
+            <!-- Campo opcional com máscara para telefone -->
+          </label>
+
+          <label for="org">Organização (se aplicável)
+            <input id="org" name="organizacao" type="text" placeholder="Nome da organização">
+            <!-- Campo opcional para identificação institucional -->
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Assunto e mensagem</legend>
+          <!-- Agrupa assunto e corpo da mensagem -->
+
+          <label for="assunto">Assunto <span aria-hidden="true">*</span>
+            <select id="assunto" name="assunto" required aria-required="true">
+              <option value="">— selecione —</option>
+              <option value="parceria">Parceria</option>
+              <option value="mídia">Assessoria de Imprensa</option>
+              <option value="doacao">Doação</option>
+              <option value="denuncia">Denúncia (assuntos sensíveis)</option>
+              <option value="outro">Outro</option>
+            </select>
+            <!-- Campo obrigatório com opções pré-definidas -->
+          </label>
+
+          <label for="mensagem">Mensagem <span aria-hidden="true">*</span>
+            <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem..." aria-required="true"></textarea>
+            <!-- Campo obrigatório para conteúdo da mensagem -->
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anexos (opcional)</legend>
+          <!-- Agrupa envio de arquivos -->
+          <p>Permitido: .pdf, .jpg, .jpeg, .png, .doc, .docx — máximo 5 MB</p>
+          <label for="anexo">Anexo
+            <input id="anexo" name="anexo" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" aria-describedby="anexoHelp">
+          </label>
+          <small id="anexoHelp">Anexo é opcional. Serão verificados tamanho e tipo pelo navegador antes do envio.</small>
+        </fieldset>
+
+        <fieldset>
+          <legend>Confirmação</legend>
+          <label>
+            <input type="checkbox" name="consent" required aria-required="true">
+            Autorizo o tratamento dos dados enviados conforme a política de privacidade. <span aria-hidden="true">*</span>
+          </label>
+          <!-- Consentimento obrigatório para envio -->
+        </fieldset>
+
+        <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+          <button type="submit">Enviar mensagem</button>
+          <button type="reset" class="secondary">Limpar</button>
+          <!-- Botões de envio e limpeza do formulário -->
+        </div>
+      </form>
+
+      <aside class="card" aria-labelledby="contato-info">
+        <!-- Conteúdo complementar com informações de contato -->
+        <h2 id="contato-info">Outros canais</h2>
+        <p>Telefone institucional: <strong>(11) 4000-0000</strong> (horário comercial)</p>
+        <p>Endereço: Rua Exemplo, 123 — Bairro — Cidade/UF</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé com informações de copyright -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

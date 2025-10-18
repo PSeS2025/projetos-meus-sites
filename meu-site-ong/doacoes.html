@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="utf-8">
+  <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Torna a página responsiva em dispositivos móveis -->
+  <title>Contato - ONG Esperança</title>
+  <!-- Título da página exibido na aba do navegador -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Link para o arquivo de estilos CSS externo -->
+  <script src="js/main.js" defer></script>
+  <!-- Script JavaScript externo; 'defer' garante que o HTML carregue antes do JS -->
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" ajuda tecnologias assistivas -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome/identidade do site -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação principal; aria-label melhora acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <!-- aria-current indica a página atual -->
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Conteúdo principal da página -->
+    <h1>Como doar</h1>
+    <!-- Título principal da seção de doação -->
+    <p>Opções: doação única, recorrente, doação de itens.</p>
+    <!-- Breve explicação das formas de doação -->
+
+    <h2>Doação online</h2>
+    <!-- Subtítulo específico para doação online -->
+
+    <form id="form-doacao" class="card" action="#" method="post">
+      <!-- Formulário de doação; action="#" indica que será processado pelo servidor -->
+      <label>Nome 
+        <input type="text" name="nome" required>
+        <!-- Campo obrigatório para nome do doador -->
+      </label>
+
+      <label>Email 
+        <input type="email" name="email" required>
+        <!-- Campo obrigatório para e-mail; validação de formato -->
+      </label>
+
+      <label>Valor (R$) 
+        <input type="number" name="valor" min="1" step="0.01" required>
+        <!-- Campo numérico para valor da doação; mínimo 1 e permite decimais -->
+      </label>
+
+      <label>Frequência
+        <select name="frequencia" required>
+          <option value="unica">Única</option>
+          <option value="mensal">Mensal</option>
+          <option value="anual">Anual</option>
+        </select>
+        <!-- Campo obrigatório para escolher se a doação será única ou recorrente -->
+      </label>
+
+      <button type="submit">Doar</button>
+      <!-- Botão para enviar o formulário -->
+    </form>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé da página; role="contentinfo" indica informações de copyright -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

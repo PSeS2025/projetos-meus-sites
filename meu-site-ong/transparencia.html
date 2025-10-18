@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="utf-8">
+    <!-- Codificação de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+    <title>Transparência - ONG Esperança</title>
+    <!-- Título da página -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link para arquivo CSS externo -->
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Biblioteca Chart.js para gráficos -->
+    <script src="js/main.js" defer></script>
+    <!-- Script JavaScript externo; defer garante que seja executado após o HTML -->
+</head>
+<body>
+    <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" ajuda leitores de tela -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome da ONG -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação; aria-label melhora acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <!-- aria-current indica a página atual -->
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Conteúdo principal da página -->
+    <h1>Transparência</h1>
+    <!-- Título principal -->
+    <p>Relatórios e demonstrativos financeiros.</p>
+    <!-- Breve descrição da seção -->
+
+    <section aria-labelledby="graficos">
+      <!-- Seção de gráficos; aria-labelledby associa título para acessibilidade -->
+      <h2 id="graficos">Gráficos</h2>
+
+      <div class="grid">
+        <!-- Container em grid para organizar os cards de gráficos -->
+
+        <div class="card">
+          <h3>Recursos por projeto</h3>
+          <canvas id="grafico-recursos" width="400" height="300" aria-label="Gráfico pizza mostrando distribuição de recursos" role="img"></canvas>
+          <!-- Canvas para gráfico de pizza; aria-label e role="img" para leitores de tela -->
+        </div>
+
+        <div class="card">
+          <h3>Evolução de voluntários</h3>
+          <canvas id="grafico-voluntarios" width="400" height="300" aria-label="Gráfico de linha mostrando voluntários ao longo do tempo" role="img"></canvas>
+          <!-- Canvas para gráfico de linha -->
+        </div>
+
+        <div class="card">
+          <h3>Impacto social</h3>
+          <canvas id="impacto-social" width="400" height="300" aria-label="Gráfico de barras mostrando o impacto social por região" role="img"></canvas>
+          <!-- Canvas para gráfico de barras -->
+        </div>
+
+      </div>    
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé da página; role="contentinfo" para leitores de tela -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+         

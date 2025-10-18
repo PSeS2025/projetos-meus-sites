@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="utf-8">
+    <!-- Codificação de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+    <title>Voluntariado - ONG Esperança</title>
+    <!-- Título da página -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o CSS externo -->
+    <script src="js/main.js" defer></script>
+    <!-- Script JavaScript externo; defer garante execução após carregamento do HTML -->
+</head>
+<body>
+    <header class="site-header" role="banner">
+    <!-- Cabeçalho do site; role="banner" para leitores de tela -->
+    <div class="container header-inner">
+      <h1>ONG Esperança</h1>
+      <!-- Nome da ONG -->
+      <nav aria-label="Menu principal">
+        <!-- Menu de navegação com aria-label para acessibilidade -->
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntariado.html">Voluntariado</a>
+        <a href="doacoes.html">Doações</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="contato.html" aria-current="page">Contato</a>
+        <!-- aria-current indica página atual -->
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Conteúdo principal -->
+    <h1>Cadastro de Voluntário</h1>
+    <!-- Título da seção principal -->
+
+    <form id="form-voluntario" class="card" action="#" method="post" novalidate>
+      <!-- Formulário de cadastro de voluntário; novalidate desativa validação nativa -->
+      
+      <fieldset>
+        <!-- Agrupa campos relacionados -->
+        <legend>Dados pessoais</legend>
+
+        <label>Nome
+            <input type="text" name="nome" required minlength="3" aria-required="true">
+            <!-- Campo obrigatório com mínimo de 3 caracteres -->
+        </label>
+
+        <label>Email
+            <input type="email" name="email" required aria-required="true">
+            <!-- Campo obrigatório de e-mail com validação nativa -->
+        </label>
+
+        <label>CPF
+            <input type="text" name="cpf" data-mask="cpf" placeholder="000.000.000-00" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" aria-describedby="cpfHelp">
+            <small id="cpfHelp">Formato: 000.000.000-00</small>
+            <!-- Máscara e padrão para CPF; aria-describedby para associar ajuda ao campo -->
+        </label>
+
+        <label>Telefone
+            <input type="tel" name="telefone" data-mask="tel" placeholder="(00) 00000-0000" required>
+            <!-- Telefone com máscara e campo obrigatório -->
+        </label>
+
+        <label>CEP
+            <input type="text" name="cep" data-mask="cep" placeholder="00000-000" required>
+            <!-- CEP com máscara -->
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Habilidades e experiência</legend>
+
+        <!-- Checkbox para múltiplas habilidades -->
+        <label><input type="checkbox" name="habilidade[]" value="educacao"> Educação</label>
+        <label><input type="checkbox" name="habilidade[]" value="saude"> Saúde</label>
+        <label><input type="checkbox" name="habilidade[]" value="logistica"> Logística</label>
+        <label><input type="checkbox" name="habilidade[]" value="comunicacao"> Comunicação</label>
+
+        <label>Experiência prévia
+            <textarea name="experiencia" rows="4" placeholder="Descreva sua experiência..."></textarea>
+            <!-- Campo de texto para experiência prévia -->
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Disponibilidade</legend>
+        <!-- Radio buttons para disponibilidade; somente uma opção pode ser selecionada -->
+        <label><input type="radio" name="disponibilidade" value="semanal" required> Semanal</label>
+        <label><input type="radio" name="disponibilidade" value="fins_de_semana"> Fins de semana</label>
+        <label><input type="radio" name="disponibilidade" value="eventos"> Eventos</label>
+      </fieldset>
+
+      <button type="submit">Enviar cadastro</button>
+      <!-- Botão de envio do formulário -->
+    </form>
+  </main>
+
+  <footer role="contentinfo">
+    <!-- Rodapé da página; role="contentinfo" para leitores de tela -->
+    <p>&copy; 2025 ONG Esperança - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
